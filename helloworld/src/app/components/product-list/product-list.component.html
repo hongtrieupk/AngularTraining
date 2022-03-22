@@ -1,0 +1,8 @@
+<h1 style="text-align: center;">Welcome to the Iphone Store</h1>
+<!-- <button class="app-btn" (click)="increasePrice()">Add 100</button> -->
+<section class="products">
+    <app-product-details class="product-card" *ngFor="let product of products"
+    [product]="product"
+    (addingProduct)="addProductToCart($event)">
+    </app-product-details>
+</section>

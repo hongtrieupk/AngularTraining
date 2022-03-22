@@ -1,0 +1,9 @@
+<div class="product-image">
+    <img src="{{product.imgUrl}}">
+    <!-- <img [src]="product.imgUrl"> -->
+</div>
+<div class="product-info">
+    <h4>{{product.name}}</h4>
+    <h5>{{product.price | currency:'USD'}}</h5>
+    <button class="app-btn" (click)="addToCart(product)">Add to <i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+</div>

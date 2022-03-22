@@ -1,0 +1,32 @@
+<div class="container">
+
+    <form #createProductForm="ngForm" (ngSubmit)="onSubmit()">
+
+        <label>Product Name:</label>
+        <input name="name" type="text" ngModel>
+
+        <label>Product Price:</label>
+        <input name="price" type="number" ngModel>
+
+        <label>Product Image Url:</label>
+        <input name="imgUrl" type="text" ngModel>
+
+        <button class="app-btn" type="submit">Submit</button>
+
+    </form>
+
+</div>
+
+<h1>Reactive Form</h1>
+<app-product-create-reactive></app-product-create-reactive>
+
+<!-- 
+
+<label>Product Name: </label>
+<input name="name" type="text" [(ngModel)]="newProduct.name">
+
+<label>Product Price: </label>
+<input name="price" type="number" [(ngModel)]="newProduct.price">
+
+<label>Product Image Url: </label>
+<input name="imgUrl" type="text" [(ngModel)]="newProduct.imgUrl"> -->

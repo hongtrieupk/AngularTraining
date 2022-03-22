@@ -1,0 +1,15 @@
+
+<ng-content #myContent></ng-content>
+
+<div style="display: flex;">
+  <!-- <h2 (click)="goto(routePathEnum.ProductList)">Product List</h2>
+  <h2 (click)="goto(routePathEnum.CreateProduct)">Create</h2> -->
+
+  <h2 routerLink="/products">Product List</h2>
+  <h2 routerLink="/products/create">Create</h2>
+  
+</div>
+
+<!-- <a class="button fancy-button" (click)="goto(routePathEnum.CheckOut)"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ({{totalProductIncart}}) Checkout</a> -->
+<a class="button fancy-button" routerLink="/checkout"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ({{totalProductIncart}}) Checkout</a>
+

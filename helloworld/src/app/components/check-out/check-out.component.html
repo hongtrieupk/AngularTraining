@@ -1,0 +1,21 @@
+<ng-container *ngIf="productsInCart.length > 0; else empty_cart">
+    <h1>Check out your products</h1>
+
+    <div *ngFor="let product of productsInCart" style="display: flex;">
+        <img src="{{product.imgUrl}}" width="34" height="44">
+        <h3>{{product.name}}</h3>
+        <h4>{{product.price | currency:'USD'}}</h4>
+    </div>
+
+    <div style="display: flex; border-top: 2px solid black;">
+        <div style="width: 34px;"></div>
+        <h3>Total</h3>
+        <h4>{{totalMoney | currency:'USD'}}</h4>
+    </div>
+
+    <button class="app-btn" (click)="checkout()">Check out</button>
+</ng-container>
+
+<ng-template #empty_cart>
+    <h1>Your have no product to check out</h1>
+</ng-template>
